@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sistem informasi data mahasiswa</title>
+</head>
+<body>
+<header>
+    <h1> Sistem Informasi Data Mahasiswa - Praktikum 1 – Kelas B</h1>
+
+    <p>Sistem Informasi untuk mengelola data mahasiswa</p>
+
+    <img src="logo.png" alt="Logo Universitas " width="200" height="150">
+</header>
+<hr>
+<nav>
+    <ul>
+        <li><a href="#informasi">Informasi Aplikasi</a></li>
+        <li><a href="#daftar-mahasiswa">Daftar Mahasiswa</a></li>
+        <li><a href="#form-tambah">Tambah Mahasiswa Baru</a></li>
+    </ul>
+</nav> 
+<hr>
+<main>
+    <section id="informasi">
+        <h2>Informasi Sistem</h2>
+        <p>paragraf singkat</p>
+        <article>
+            <h3>Fitur Aplikasi</h3>
+            <ul>
+                <li>Menampilkan daftar mahasiswa</li>
+                <li>Menambahkan data mahasiswa baru</li>
+                <li>Mengedit data mahasiswa</li>
+                <li>Menghapus data mahasiswa</li>
+            </ul>
+        </article>
+    </section>
+
+    <hr>
+    <section id="daftar-mahasiswa">
+        <h2>Daftar Mahasiswa</h2>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Foto</th>
+                    <th>Nama Lengkap</th>
+                    <th>NPM</th>
+                    <th>Prodi</th>
+                    <th>Angkatan</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><img src="foto1.jpg" alt="Foto Mahasiswa 1" width="100" height="100"></td>
+                    <td>Nama Mahasiswa 1</td>
+                    <td>123456789</td>
+                    <td>Teknik Informatika</td>
+                    <td>2020</td>
+                    <td>nama.mahasiswa1@unila.ac.id</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><img src="foto2.jpg" alt="Foto Mahasiswa 2" width="100" height="100"></td>
+                    <td>Nama Mahasiswa 2</td>
+                    <td>987654321</td>
+                    <td>Sistem Informasi</td>
+                    <td>2019</td>
+                    <td>nama.mahasiswa2@unila.ac.id</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><img src="foto3.jpg" alt="Foto Mahasiswa 3" width="100" height="100"></td>
+                    <td>Nama Mahasiswa 3</td>
+                    <td>456789123</td>
+                    <td>Teknik Komputer</td>
+                    <td>2021</td>
+                    <td>nama.mahasiswa3@unila.ac.id</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+<hr>
+    <section id="form-tambah">
+        <h2>Tambah Mahasiswa Baru</h2>
+        <p>Silakan isi formulir di bawah ini untuk menambahkan data mahasiswa baru ke dalam sistem.</p>
+        <form action="#" method="post">
+       <fieldset>
+        <legend>Formulir Pendaftaran Mahasiswa</legend>
+       <p>
+            <label for="npm">Nomor Pokok Mahasiwa</label>
+            <br>
+            <input type="text" id="npm" name="npm" required placeholder="Masukkan NPM" pattern="[0-9]{8,12}" title="NPM harus terdiri dari 8-12 digit angka">
+            <br>
+            <small>Format NPM: 8-12 digit angka</small>
+        </p>
+            <p>
+            <label for="nama">Nama Lengkap:</label>
+            <br>
+            <input type="text" id="nama" name="nama" required placeholder="Masukkan nama lengkap" minlength="3" maxlength="50">
+            <br>
+            <small>Nama harus terdiri dari 3-50 karakter</small>
+        </p>
+        <p>
+            <label for="program_studi">Program Studi:</label>
+            <br>
+            <select id="program_studi" name="program_studi" required>
+                <option value="">Pilih Program Studi</option>
+                <option value="Teknik Informatika">Teknik Informatika</option>
+            </select>
+            <br>
+            <small>Pilih salah satu program studi yang tersedia</small>
+        </p>
+        <p>
+            <label for="angkatan">Angkatan:</label>
+            <br>
+            <input type="number" id="angkatan" name="angkatan" required placeholder="Masukkan tahun angkatan" min="2018" max="2026">
+            <br>
+            <small>Angkatan harus antara tahun 2018 hingga 2026</small>
+        </p>
+        <p>
+            <label for="email">Email:</label>
+            <br>
+            <input type="email" id="email" name="email" required placeholder="Masukkan email mahasiswa">
+            <br>
+            <small>Format email harus valid (misal: nama.mahasiswa@university.edu)</small>
+        </p>
+        <p>
+           <button type="submit">Simpan Data Mahasiswa</button>
+           <button type="reset">Reset Formulir</button>
+        </p>
+       </fieldset>
+        </form>
+    </section> 
+</main> 
+    <footer>
+        <p>&copy; 2024 Sistem Informasi Data Mahasiswa. All rights reserved.</p> 
+    </footer>
+</body>
+</html>

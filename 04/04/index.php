@@ -11,7 +11,7 @@ require_once __DIR__ . '/includes/functions.php';
 // Ambil keyword pencarian jika ada
 
 // Percobaan 4-4 Langkah 2
-$keyword = isset($_GET['search']) ? trim($_POST['search']) : '';
+$keyword = isset($_GET['search']) ? trim($_GET['search']) : '';
 $daftar_mahasiswa = get_all_mahasiswa($keyword);
 
 
@@ -22,11 +22,12 @@ $total_tampil = count($daftar_mahasiswa);
 $flash = get_flash_message();
 
 $page_title = 'Beranda - Sistem Informasi Data Mahasiswa';
+
 require_once __DIR__ . '/includes/header.php';
 
-$page_title = 'Uji Fungsi Modular - Percobaan 1';
-$daftar_mahasiswa = get_all_mahasiswa();
-$total_semua = count_total_mahasiswa();
+//$page_title = 'Uji Fungsi Modular - Percobaan 1';
+//$daftar_mahasiswa = get_all_mahasiswa();
+//$total_semua = count_total_mahasiswa();
 ?>
 
 <!-- Kotak Flash Message (Feedback Sukses / Error dari Server) -->
